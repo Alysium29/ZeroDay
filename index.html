@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>Zero Day - Accueil</title>
+</head>
+<body>
+    <h1>Faire un qr code qui redirige vers les quizs</h1>
+    <h1>Zero Day</h1>
+    <div>In Zero Day, the players are users on an Internet server. They have a common public
+        session (the central board), and one private session each. The goal: having your private
+        session be the most secure on the server. But be careful : your points will also depend
+        on the performance of the public session and of the sessions of other players, which you
+        will be able to influence !
+    </div> 
+    
+    <br />
+    
+    <div> 
+        <h2>Setup :</h2>
+        <ul>  
+            <li>Place the board in the middle of the players</li>
+            <li>Each player draws 3 classic cards and 2 Mission cards, that they can look at. The Mission cards are only drawn now and cannot be changed.</li>
+            <li>Scan the QR code in the middle of the board. 
+                Take 2 quizzes, one for each Mission card. 
+                If you answer right, keep the Mission card. 
+                If you're wrong, discard it.
+                (You cannot draw a new Mission)
+            </li>
+        </ul>
+    </div>
+    
+    <div> 
+        <h2>Course of a turn :</h2>
+        On your turn, you play your 3 cards (in any order): 
+        <ul>
+            <li>One in the public session</li>
+            <li>One in your session</li>
+            <li>One in an opposing session</li>
+        </ul>
+        See the list of cards to know the effects of each one.
+        After playing all 3 cards, draw 3 more. If the deck is empty, wait for everyone to have played all their cards to end the game.
+    </div>
+
+    <div> 
+        <h2>Scoring :</h2>
+        For each family, determine its level of protection :
+        <ul>
+            <li>If there are more cards <em>above</em> the family, it is <strong class="protected">protected</strong> and will give <em class="protected">positive</em> points.</li>
+            <li>If there are more cards <em>below</em> the family, it is <strong class="corrupted">corrupted</strong> and will give <em class="corrupted">negative</em> points.</li>
+            <li>If there is <em>no majority</em>, the family is <strong class="vulnerable">vulnerable</strong> and will <em class="vulnerable">not</em> give any points.</li>
+        </ul>
+        Then, count the number of cards by family in your session (remember a <span class="vpn">VPN</span> counts as 2 cards) :
+        <ul>
+            <li>Each card from a <strong class="protected">protected</strong> family gives <strong class="protected">+1</strong> point.</li>
+            <li>Each card from a <strong class="corrupted">corrupted</strong> family gives <strong class="corrupted">-1</strong> point.</li>
+            <li>Cards from a <strong class="vulnerable">vulnerable</strong> family give <strong class="vulnerable">0</strong> point.</li>
+        </ul>
+        Finally, reveal your Mission cards to the other players. If you completed a mission, add the points written on the card to your score.
+        The player with the most points wins.
+    </div>
+
+    <br />
+
+    <div>
+        <h2>Special cards</h2>
+        <p> 
+            <h3>Mission cards :</h3>
+            Mission cards provide goals that will grant bonus points if completed at the end of the game. 
+            They are drawn at the start of the game and only revealed once the game is over. 
+        </p>
+        <p> 
+            <h3>Classic cards :</h3>
+            In each family, certain cards have roles that will be valuable to you to change the course of the game: 
+            <ul> 
+                <li><strong class="vpn">VPN:</strong> 
+                    It counts for 2 cards in all sessions.</li>
+                <li><strong class="hacker">Hacker:</strong> 
+                    It is played face down (in the public session, it is placed in the center row of the board, but still above or below). 
+                    Its family will only be revealed at the end of the game.</li>
+                <li><strong class="virus">Virus:</strong> 
+                    When a player places it in a session, they have the option to remove a card present in that same session, regardless of the card's family. 
+                    The eliminated card is permanently removed from the game. The <span class="virus">virus</span> can remove a <span class="hacker">hacker</span>, in which case the <span class="hacker">hacker</span>'s family is not revealed.
+                    (If multiple cards from the same family are in the same session, the <span class="virus">virus</span> can only remove the most recent one).
+                    The ability of the <span class="virus">virus</span> is optional.
+                <li><strong class="antivirus">Antivirus:</strong> 
+                    It is immune to <span class="virus">viruses</span> and therefore can never be removed.</li>
+            </ul>
+            The other cards with no icon have no additional effect.
+        </p>
+    </div>
+</body>
+</html>
