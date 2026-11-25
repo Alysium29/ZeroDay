@@ -84,8 +84,9 @@
     margin-top: 1.5rem;
 }
 
-#confirm_button, 
-#reload_button {
+#confirm_button,
+#reload_easy_button,
+#reload_hard_button {
     margin-top: 1.5rem;
 
     background-color: #4aa3ff;
@@ -103,7 +104,8 @@
 }
 
 #confirm_button:disabled,
-#reload_button:disabled {
+#reload_easy_button:disabled,
+#reload_hard_button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }

@@ -10,8 +10,11 @@ const confirmButton =
 const answerElement =
     document.getElementById("answer");
 
-const reloadButton =
-    document.getElementById("reload_button");
+const reloadHardButton =
+    document.getElementById("reload_hard_button");
+
+const reloadEasyButton =
+    document.getElementById("reload_easy_button");
 
 const quizContent =
     document.getElementById("quiz-content");
@@ -88,7 +91,9 @@ function displayQuiz(quiz) {
         quiz.question;
 
     answerElement.hidden = true;
-    reloadButton.hidden = true;
+    reloadHardButton.hidden = true;
+    reloadEasyButton.hidden = true;
+    confirmButton.hidden = false;
     answersContainer.innerHTML = "";
 
     selectedButton = null;
@@ -134,24 +139,27 @@ function displayQuiz(quiz) {
     });
 }
 
+function selectDifficulty(difficulty) {
+    selectedDifficulty = difficulty;
+
+    difficultyButtons.forEach(button => {
+        const isSelected =
+            button.dataset.difficulty === difficulty;
+
+        button.classList.toggle("selected", isSelected);
+        button.setAttribute("aria-pressed", isSelected);
+        button.hidden = !isSelected;
+        button.disabled = true;
+    });
+}
+
 difficultyButtons.forEach(button => {
     button.addEventListener("click", () => {
         if (button.disabled) {
             return;
         }
 
-        selectedDifficulty = button.dataset.difficulty;
-
-        difficultyButtons.forEach(difficultyButton => {
-            const isSelected =
-                difficultyButton === button;
-
-            difficultyButton.classList.toggle("selected", isSelected);
-            difficultyButton.setAttribute("aria-pressed", isSelected);
-            difficultyButton.hidden = !isSelected;
-            difficultyButton.disabled = true;
-        });
-
+        selectDifficulty(button.dataset.difficulty);
         quizContent.hidden = false;
         loadQuiz();
     });
@@ -195,10 +203,19 @@ confirmButton.addEventListener("click", () => {
     }
 
     answerElement.hidden = false;
-    confirmButton.disabled = true;
-    reloadButton.hidden = false;
+    confirmButton.hidden = true;
+    reloadEasyButton.hidden = false;
+    reloadHardButton.hidden = false;
 });
 
-reloadButton.addEventListener("click", () => {
+reloadEasyButton.addEventListener("click", () => {
+    answerElement.textContent = "";
+    selectDifficulty("Easy");
+    loadQuiz();
+});
+
+reloadHardButton.addEventListener("click", () => {
+    answerElement.textContent = "";
+    selectDifficulty("Hard");
     loadQuiz();
 });
