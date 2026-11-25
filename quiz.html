@@ -1,47 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Zero Day - Quiz</title>
 
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./quiz.css">
+
     <script src="./quiz.js" defer></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-
-        #answers {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .answer-button {
-            padding: 10px;
-            text-align: left;
-            cursor: pointer;
-        }
-
-        .selected {
-            border: 3px solid dodgerblue;
-        }
-
-        #confirm_button {
-            margin-top: 20px;
-            padding: 10px 20px;
-        }
-
-        #answer {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
@@ -51,15 +20,23 @@
         <a href="./quiz.html">Quiz</a>
     </nav>
 
-    <h2 id="question">Chargement...</h2>
+    <div id="quiz-container">
 
-    <div id="answers"></div>
+        <h1>Zero Day Quiz</h1>
 
-    <button id="confirm_button" disabled>
-        Confirm
-    </button>
+        <h2 id="question">
+            Loading...
+        </h2>
 
-    <span id="answer" hidden></span>
+        <div id="answers"></div>
+
+        <button id="confirm_button" disabled>
+            Confirm
+        </button>
+
+        <span id="answer" hidden></span>
+
+    </div>
 
 </body>
 

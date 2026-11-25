@@ -1,0 +1,22 @@
+.protected {
+    color:green;
+}
+.corrupted {
+    color:red;
+}
+.vulnerable {
+    color:orange;
+}
+
+.vpn {
+    color:purple;
+}
+.hacker {
+    color:brown;
+}
+.virus {
+    color:crimson;
+}
+.antivirus {
+    color:blue;
+}
