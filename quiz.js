@@ -33,6 +33,21 @@ async function loadQuiz() {
     displayQuiz(currentQuiz);
 }
 
+function shuffle(array) {
+
+    for (let i = array.length - 1; i > 0; i--) {
+
+        const j = Math.floor(
+            Math.random() * (i + 1)
+        );
+
+        [array[i], array[j]] =
+            [array[j], array[i]];
+    }
+
+    return array;
+}
+
 function displayQuiz(quiz) {
 
     questionElement.textContent =
@@ -42,15 +57,27 @@ function displayQuiz(quiz) {
 
     selectedButton = null;
 
-    quiz.answers.forEach((answerText, index) => {
+    confirmButton.disabled = true;
+
+    const shuffledAnswers =
+        quiz.answers.map((answer, index) => ({
+            text: answer,
+            isCorrect: index === quiz.correct
+        }));
+
+    shuffle(shuffledAnswers);
+
+    shuffledAnswers.forEach(answer => {
 
         const button =
             document.createElement("button");
 
-        button.textContent = answerText;
+        button.textContent = answer.text;
+
         button.classList.add("answer-button");
 
-        button.dataset.index = index;
+        button.dataset.correct =
+            answer.isCorrect;
 
         button.addEventListener("click", () => {
 
@@ -81,18 +108,20 @@ confirmButton.addEventListener("click", () => {
     });
 
     const correctButton =
-        buttons[currentQuiz.correct];
+        [...buttons].find(
+            button => button.dataset.correct === "true"
+        );
 
     correctButton.style.backgroundColor = "green";
     correctButton.style.color = "white";
 
-    const selectedIndex =
-        Number(selectedButton.dataset.index);
+    const isCorrect =
+        selectedButton.dataset.correct === "true";
 
-    if (selectedIndex === currentQuiz.correct) {
+    if (isCorrect) {
 
         answerElement.textContent =
-            "Correct !\n" + currentQuiz.explanation;
+            "Correct!\n" + currentQuiz.explanation;
     }
     else {
 
@@ -103,7 +132,7 @@ confirmButton.addEventListener("click", () => {
             "white";
 
         answerElement.textContent =
-            "Wrong !\n" + currentQuiz.explanation;
+            "Wrong!\n" + currentQuiz.explanation;
     }
 
     answerElement.hidden = false;
