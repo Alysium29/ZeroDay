@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+
 </head>
 
 <body>
@@ -32,6 +34,19 @@
         <h2>Setup :</h2>
 
         <ul>
+            <li>
+                <label for="players"> Select the number of players:</label>
+                <select id="players">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                </select>
+            <li>
+                Remove <strong id="removed-cards">0</strong> cards from the classic deck.
+                The deck should contain
+                <strong id="remaining-cards">90</strong> cards.
+            </li>
             <li>Place the board in the middle of the players</li>
             <li>
                 Each player draws 3 classic cards and 2 Mission cards, which they may look at.
