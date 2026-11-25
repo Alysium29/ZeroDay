@@ -43,7 +43,14 @@
     cursor: default;
 }
 
-#confirm_button {
+.button-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#confirm_button, 
+#reload_button {
     margin-top: 1.5rem;
 
     background-color: #4aa3ff;
@@ -60,7 +67,8 @@
     cursor: pointer;
 }
 
-#confirm_button:disabled {
+#confirm_button:disabled,
+#reload_button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -70,4 +78,5 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
+    white-space: pre-line;
 }

@@ -16,8 +16,7 @@
 <body>
 
     <nav>
-        <a href="./index.html">Rules</a> |
-        <a href="./quiz.html">Quiz</a>
+        <a href="./index.html">Rules</a>
     </nav>
 
     <div id="quiz-container">
@@ -30,9 +29,15 @@
 
         <div id="answers"></div>
 
-        <button id="confirm_button" disabled>
-            Confirm
-        </button>
+        <div class="button-row">
+            <button id="confirm_button" disabled>
+                Confirm
+            </button>
+
+            <button id="reload_button" hidden>
+                New Quiz
+            </button>
+        </div>
 
         <span id="answer" hidden></span>
 

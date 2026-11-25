@@ -10,6 +10,12 @@ const confirmButton =
 const answerElement =
     document.getElementById("answer");
 
+const reloadButton =
+    document.getElementById("reload_button");
+
+const navbar =
+    document.getElementById("navbar");
+
 let currentQuiz = null;
 let selectedButton = null;
 
@@ -86,7 +92,7 @@ confirmButton.addEventListener("click", () => {
     if (selectedIndex === currentQuiz.correct) {
 
         answerElement.textContent =
-            "Correct !";
+            "Correct !\n" + currentQuiz.explanation;
     }
     else {
 
@@ -97,12 +103,16 @@ confirmButton.addEventListener("click", () => {
             "white";
 
         answerElement.textContent =
-            "Wrong !";
+            "Wrong !\n" + currentQuiz.explanation;
     }
 
     answerElement.hidden = false;
-
     confirmButton.disabled = true;
+    reloadButton.hidden = false;
+});
+
+reloadButton.addEventListener("click", () => {
+    location.reload();
 });
 
 loadQuiz();
