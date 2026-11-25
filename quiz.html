@@ -22,23 +22,32 @@
 
         <h1>Zero Day Quiz</h1>
 
-        <h2 id="question">
-            Loading...
-        </h2>
-
-        <div id="answers"></div>
-
-        <div class="button-row">
-            <button id="confirm_button" disabled>
-                Confirm
+        <div id="difficulty-selector" role="group" aria-label="Quiz difficulty">
+            <button type="button" class="difficulty-button" data-difficulty="Easy" aria-pressed="false">
+                Easy
             </button>
-
-            <button id="reload_button" hidden>
-                New Quiz
+            <button type="button" class="difficulty-button" data-difficulty="Hard" aria-pressed="false">
+                Hard
             </button>
         </div>
 
-        <span id="answer" hidden></span>
+        <div id="quiz-content" hidden>
+            <h2 id="question"></h2>
+
+            <div id="answers"></div>
+
+            <div class="button-row">
+                <button id="confirm_button" disabled>
+                    Confirm
+                </button>
+
+                <button id="reload_button" hidden>
+                    New Quiz
+                </button>
+            </div>
+
+            <span id="answer" hidden></span>
+        </div>
 
     </div>
 

@@ -13,11 +13,18 @@ const answerElement =
 const reloadButton =
     document.getElementById("reload_button");
 
+const quizContent =
+    document.getElementById("quiz-content");
+
 const navbar =
     document.getElementById("navbar");
 
+const difficultyButtons =
+    document.querySelectorAll(".difficulty-button");
+
 let currentQuiz = null;
 let selectedButton = null;
+let selectedDifficulty = null;
 
 async function loadQuiz() {
 
@@ -27,8 +34,17 @@ async function loadQuiz() {
     const quizzes =
         await response.json();
 
+    const quizzesForDifficulty =
+        quizzes.filter(quiz => quiz.difficulty === selectedDifficulty);
+
+    if (quizzesForDifficulty.length === 0) {
+        throw new Error(`No quizzes found for difficulty "${selectedDifficulty}".`);
+    }
+
     currentQuiz =
-        quizzes[Math.floor(Math.random() * quizzes.length)];
+        quizzesForDifficulty[
+            Math.floor(Math.random() * quizzesForDifficulty.length)
+        ];
 
     displayQuiz(currentQuiz);
 }
@@ -53,6 +69,8 @@ function displayQuiz(quiz) {
     questionElement.textContent =
         quiz.question;
 
+    answerElement.hidden = true;
+    reloadButton.hidden = true;
     answersContainer.innerHTML = "";
 
     selectedButton = null;
@@ -98,6 +116,29 @@ function displayQuiz(quiz) {
     });
 }
 
+difficultyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.disabled) {
+            return;
+        }
+
+        selectedDifficulty = button.dataset.difficulty;
+
+        difficultyButtons.forEach(difficultyButton => {
+            const isSelected =
+                difficultyButton === button;
+
+            difficultyButton.classList.toggle("selected", isSelected);
+            difficultyButton.setAttribute("aria-pressed", isSelected);
+            difficultyButton.hidden = !isSelected;
+            difficultyButton.disabled = true;
+        });
+
+        quizContent.hidden = false;
+        loadQuiz();
+    });
+});
+
 confirmButton.addEventListener("click", () => {
 
     const buttons =
@@ -141,7 +182,5 @@ confirmButton.addEventListener("click", () => {
 });
 
 reloadButton.addEventListener("click", () => {
-    location.reload();
+    loadQuiz();
 });
-
-loadQuiz();
