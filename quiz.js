@@ -41,10 +41,28 @@ async function loadQuiz() {
         throw new Error(`No quizzes found for difficulty "${selectedDifficulty}".`);
     }
 
+    const previousQuestionKey =
+        `zeroDayLastQuizQuestion:${selectedDifficulty}`;
+
+    const previousQuestion =
+        localStorage.getItem(previousQuestionKey);
+
+    const quizzesWithoutPrevious =
+        quizzesForDifficulty.filter(
+            quiz => quiz.question !== previousQuestion
+        );
+
+    const availableQuizzes =
+        quizzesWithoutPrevious.length > 0
+            ? quizzesWithoutPrevious
+            : quizzesForDifficulty;
+
     currentQuiz =
-        quizzesForDifficulty[
-            Math.floor(Math.random() * quizzesForDifficulty.length)
+        availableQuizzes[
+            Math.floor(Math.random() * availableQuizzes.length)
         ];
+
+    localStorage.setItem(previousQuestionKey, currentQuiz.question);
 
     displayQuiz(currentQuiz);
 }
@@ -162,7 +180,7 @@ confirmButton.addEventListener("click", () => {
     if (isCorrect) {
 
         answerElement.textContent =
-            "Correct!\n" + currentQuiz.explanation;
+            "Correct! " + currentQuiz.explanation;
     }
     else {
 
@@ -173,7 +191,7 @@ confirmButton.addEventListener("click", () => {
             "white";
 
         answerElement.textContent =
-            "Wrong!\n" + currentQuiz.explanation;
+            "Wrong! " + currentQuiz.explanation;
     }
 
     answerElement.hidden = false;
