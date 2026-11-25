@@ -1,0 +1,362 @@
+[
+  {
+    "category": "Generic",
+    "difficulty": "Easy",
+    "question": "What does cybersecurity mean?",
+    "answers": [
+      "Protecting computers, data and networks from attacks",
+      "Making computers faster",
+      "Designing video games"
+    ],
+    "correct": 0,
+    "explanation": "Cybersecurity protects systems, networks and data from threats."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Easy",
+    "question": "Which habit helps you stay safe online?",
+    "answers": [
+      "Using the same password everywhere",
+      "Installing updates regularly",
+      "Clicking every link"
+    ],
+    "correct": 1,
+    "explanation": "Updates fix security vulnerabilities and improve protection."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Easy",
+    "question": "What is a strong password?",
+    "answers": [
+      "Your birth date and your name",
+      "Azerty4321!",
+      "A long mix of letters, numbers and symbols"
+    ],
+    "correct": 2,
+    "explanation": "Long and complex passwords are harder to crack."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What does the CIA triad stand for?",
+    "answers": [
+      "Confidentiality, Integrity, Availability",
+      "Control, Identity, Access",
+      "Cloud, Internet, Antivirus"
+    ],
+    "correct": 0,
+    "explanation": "The CIA triad defines the three core security principles."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What does the 3-2-1 backup rule mean?",
+    "answers": [
+      "3 passwords, 2 users, 1 device",
+      "3 copies, 2 types of storage, 1 stored off-site",
+      "3 antivirus, 2 firewalls, 1 VPN"
+    ],
+    "correct": 1,
+    "explanation": "The rule improves resilience against data loss."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What is social engineering?",
+    "answers": [
+      "Writing secure code for an engineer",
+      "Building a secure network",
+      "Manipulating people to get information or access"
+    ],
+    "correct": 2,
+    "explanation": "Attackers exploit human trust rather than technical flaws."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Easy",
+    "question": "What can spread a virus?",
+    "answers": [
+      "Updating your system",
+      "Opening an unknown email attachment",
+      "Locking your screen"
+    ],
+    "correct": 1,
+    "explanation": "Malicious attachments are a common infection vector."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Easy",
+    "question": "Which is a sign your PC may be infected?",
+    "answers": [
+      "Longer battery life",
+      "A brighter screen while in use",
+      "Slow PC and strange pop-ups"
+    ],
+    "correct": 2,
+    "explanation": "Unexpected slowdowns and pop-ups often indicate malware."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Easy",
+    "question": "What is a Trojan?",
+    "answers": [
+      "Malware disguised as a legitimate program",
+      "A backup tool that protects your data",
+      "A firewall"
+    ],
+    "correct": 0,
+    "explanation": "A Trojan tricks users into installing malware."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "How does a worm differ from a virus?",
+    "answers": [
+      "It needs you to run a file on your computer",
+      "It spreads by itself through networks",
+      "It only works on phones"
+    ],
+    "correct": 1,
+    "explanation": "Worms can self-propagate without user action."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "What does ransomware do?",
+    "answers": [
+      "Hides your IP address",
+      "Steals your Wi-Fi",
+      "Encrypts your files and demands a payment"
+    ],
+    "correct": 2,
+    "explanation": "Ransomware locks data until a ransom is paid."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "What is a botnet?",
+    "answers": [
+      "A network of infected computers controlled remotely",
+      "A bot that cleans files and creates backups",
+      "A type of firewall"
+    ],
+    "correct": 0,
+    "explanation": "Botnets are used to launch coordinated attacks."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Easy",
+    "question": "What is phishing?",
+    "answers": [
+      "Fake messages that trick you into giving personal information",
+      "Scanning a network",
+      "A mobile antivirus"
+    ],
+    "correct": 0,
+    "explanation": "Phishing aims to steal sensitive information."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Easy",
+    "question": "An email says 'Your account will be closed, click now!'. What should you do?",
+    "answers": [
+      "Click quickly because it is urgent",
+      "Do not click and check through the official website",
+      "Share it with friends"
+    ],
+    "correct": 1,
+    "explanation": "Always verify urgent requests through trusted channels."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Easy",
+    "question": "What can you do before clicking a link?",
+    "answers": [
+      "Click immediately",
+      "Reload the page",
+      "Hover over it to see the real address"
+    ],
+    "correct": 2,
+    "explanation": "Hovering helps identify suspicious URLs."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "What is spear phishing?",
+    "answers": [
+      "Phishing sent to millions at random",
+      "Phishing tailored to one specific person",
+      "Phishing by phone call only"
+    ],
+    "correct": 1,
+    "explanation": "Spear phishing is a targeted social engineering attack."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "What is a zero-day vulnerability?",
+    "answers": [
+      "A virus that lasts one day",
+      "A free antivirus",
+      "A flaw unknown to the vendor with no patch available"
+    ],
+    "correct": 2,
+    "explanation": "Zero-day flaws are exploited before a fix exists."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "What is a brute force attack?",
+    "answers": [
+      "Trying many password combinations automatically",
+      "Breaking a computer with a hammer",
+      "Overloading a website with data"
+    ],
+    "correct": 0,
+    "explanation": "Brute force attacks rely on repeated password guesses."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Easy",
+    "question": "What does an antivirus do?",
+    "answers": [
+      "Speed up games",
+      "Block all advertisements",
+      "Detect and remove malicious software"
+    ],
+    "correct": 2,
+    "explanation": "Antivirus software helps identify and remove malware."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Easy",
+    "question": "Why should you update your antivirus?",
+    "answers": [
+      "To recognize new threats",
+      "To change its colors",
+      "To increase storage space"
+    ],
+    "correct": 0,
+    "explanation": "Updates provide new malware detection signatures."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Easy",
+    "question": "What is quarantine?",
+    "answers": [
+      "Sending files through a USB drive",
+      "Isolating a suspicious file so it cannot cause harm",
+      "Opening a file safely"
+    ],
+    "correct": 1,
+    "explanation": "Quarantine prevents suspicious files from running."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "What does a firewall do?",
+    "answers": [
+      "Store passwords in the cloud",
+      "Clean files from viruses",
+      "Filter incoming and outgoing network traffic"
+    ],
+    "correct": 2,
+    "explanation": "Firewalls monitor and control network communications."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "What is a false positive?",
+    "answers": [
+      "A harmless file wrongly flagged as a threat",
+      "A virus missed by the antivirus",
+      "A successful scan"
+    ],
+    "correct": 0,
+    "explanation": "False positives incorrectly identify safe files as malicious."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "A game does not work. What should you do with your firewall?",
+    "answers": [
+      "Disable it permanently",
+      "Create a specific rule for the game",
+      "Disable it only at night"
+    ],
+    "correct": 1,
+    "explanation": "Allow only the required traffic instead of disabling security."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Easy",
+    "question": "What does a VPN do?",
+    "answers": [
+      "Encrypts your connection and hides your IP address",
+      "Removes viruses",
+      "Makes Wi-Fi faster"
+    ],
+    "correct": 0,
+    "explanation": "VPNs protect communications over untrusted networks."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Easy",
+    "question": "When is a VPN especially useful?",
+    "answers": [
+      "Only at home",
+      "On public Wi-Fi",
+      "When offline"
+    ],
+    "correct": 1,
+    "explanation": "Public networks are more exposed to interception."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Easy",
+    "question": "Does a VPN replace an antivirus?",
+    "answers": [
+      "Yes, it protects against viruses",
+      "Only on PC",
+      "No, it protects connections, not files"
+    ],
+    "correct": 2,
+    "explanation": "VPNs and antivirus software solve different security problems."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What is encryption?",
+    "answers": [
+      "Turning data into unreadable code without the key",
+      "Deleting data permanently",
+      "Compressing a file"
+    ],
+    "correct": 0,
+    "explanation": "Encryption protects data confidentiality."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What does the HTTPS padlock mean?",
+    "answers": [
+      "The website is completely safe",
+      "The connection to the website is encrypted",
+      "The website runs faster"
+    ],
+    "correct": 1,
+    "explanation": "HTTPS secures communications between browser and website."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What is a man-in-the-middle attack?",
+    "answers": [
+      "A game with three players",
+      "A fight between two hackers",
+      "An attacker secretly intercepting communications between two parties"
+    ],
+    "correct": 2,
+    "explanation": "The attacker positions themselves between communicating parties."
+  }
+]
