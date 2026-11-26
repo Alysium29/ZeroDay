@@ -31,6 +31,15 @@ let state = load() || newState([], false);
 let quizzes = [], current = null, quiz = null, selected = null, locked = false;
 let mode = "round", roundQueue = [], qIndex = 0, hardOnly = false;
 
+// Categories that are not a card family are linked to one (color + QR code filter)
+const FAMILY = {
+    Passwords: "Generic", Accounts: "Generic", Devices: "Generic", Privacy: "Generic", Data: "Generic",
+    "Wi-Fi": "VPN", "Home Network": "VPN", Browsing: "VPN",
+    Backups: "Antivirus", Software: "Virus", "Physical Security": "Virus",
+    Scams: "Hacker", Messaging: "Hacker"
+};
+const family = q => FAMILY[q.category] || q.category;
+
 const pick = arr => arr[Math.floor(Math.random() * arr.length)];
 const perRound = () => state.players.length >= 4 ? 2 : 1; // 2-3 players: 1 quiz, 4-5 players: 2 quizzes
 const hasMission = () => state.missionQueue.length > 0;
@@ -142,7 +151,7 @@ function updateTitle() {
 function displayQuiz() {
     updateTitle();
     $("cat").textContent = quiz.category;
-    $("round").dataset.cat = quiz.category;
+    $("round").dataset.cat = family(quiz);
     $("diff").textContent = quiz.difficulty;
     $("diff").className = "badge " + quiz.difficulty;
     $("question").textContent = quiz.question;
@@ -175,7 +184,7 @@ function startQuiz() {
     const all = quizzes.map((_, i) => i);
     let pool = all.filter(i => mode === "mission" ? quizzes[i].difficulty === "Easy"
         : hardOnly ? quizzes[i].difficulty === "Hard"
-        : !filter.category || quizzes[i].category.toLowerCase() === filter.category);
+        : !filter.category || family(quizzes[i]).toLowerCase() === filter.category);
     if (!pool.length) pool = all;
 
     // No repeat until the whole pool has been used
@@ -311,7 +320,7 @@ $("confirm_button").addEventListener("click", () => {
         state.missionQueue.shift();
     } else if (right) {
         player.points = Math.min(player.points + POINT_STEP, MAX_POINTS);
-        message = `Correct! Card/action validated, +${POINT_STEP} pt`;
+        message = `Correct! Action validated, +${POINT_STEP} pt`;
     } else {
         selected.classList.add("wrong");
         player.points = Math.max(player.points - POINT_STEP, -MAX_POINTS);
@@ -329,6 +338,8 @@ $("confirm_button").addEventListener("click", () => {
 });
 
 $("reload_button").addEventListener("click", () => {
+    answer.textContent = "";
+    answer.hidden = true;
     if (hasMore()) {
         if (mode === "round") qIndex++;
         startQuiz();

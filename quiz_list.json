@@ -358,5 +358,617 @@
     ],
     "correct": 2,
     "explanation": "The attacker positions themselves between communicating parties."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Easy",
+    "question": "What is two-factor authentication (2FA)?",
+    "answers": [
+      "A second proof of identity besides your password",
+      "Two passwords written in one file",
+      "Two antivirus running together"
+    ],
+    "correct": 0,
+    "explanation": "2FA blocks most attacks even if your password leaks."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What is the principle of least privilege?",
+    "answers": [
+      "Give everyone administrator rights",
+      "Give users only the access they need",
+      "Share one account between a team"
+    ],
+    "correct": 1,
+    "explanation": "Limiting rights limits the damage of any compromise."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Easy",
+    "question": "Which file is the most suspicious?",
+    "answers": [
+      "holiday.jpg",
+      "notes.txt",
+      "invoice.pdf.exe"
+    ],
+    "correct": 2,
+    "explanation": "A double extension hides an executable behind a document name."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "What is a rootkit?",
+    "answers": [
+      "Malware that hides deep in the system to keep access",
+      "A tool that repairs the boot sector",
+      "A type of backup"
+    ],
+    "correct": 0,
+    "explanation": "Rootkits hide themselves and other malware from the user and the antivirus."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Easy",
+    "question": "A caller says he is tech support and asks for your password. What do you do?",
+    "answers": [
+      "Give it, he is an expert",
+      "Hang up and never share it",
+      "Give half of it"
+    ],
+    "correct": 1,
+    "explanation": "No legitimate support ever asks for your password."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "What is a DDoS attack?",
+    "answers": [
+      "Stealing a database",
+      "Guessing a password",
+      "Many machines flooding a service until it is unavailable"
+    ],
+    "correct": 2,
+    "explanation": "A DDoS attacks availability, one pillar of the CIA triad."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Easy",
+    "question": "A pop-up ad offers a free antivirus. Should you install it?",
+    "answers": [
+      "No, download software only from official sources",
+      "Yes, free is good",
+      "Yes, if the ad looks professional"
+    ],
+    "correct": 0,
+    "explanation": "Fake antivirus pop-ups are a classic way to spread malware."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "What does an IDS do?",
+    "answers": [
+      "Block all traffic",
+      "Detect and report suspicious activity",
+      "Encrypt hard drives"
+    ],
+    "correct": 1,
+    "explanation": "An Intrusion Detection System monitors and alerts; it does not block by itself."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Easy",
+    "question": "What is a VPN useful for at work?",
+    "answers": [
+      "Playing games faster",
+      "Deleting emails",
+      "Reaching company resources securely from outside"
+    ],
+    "correct": 2,
+    "explanation": "A VPN creates an encrypted tunnel to the company network."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What does an HTTPS certificate prove?",
+    "answers": [
+      "The identity of the website",
+      "That the site has no virus",
+      "That the site is free"
+    ],
+    "correct": 0,
+    "explanation": "Certificates let your browser verify who it is talking to."
+  },
+  {
+    "category": "Passwords",
+    "difficulty": "Easy",
+    "question": "What is the main benefit of using a password manager?",
+    "answers": [
+      "It creates and stores strong, unique passwords",
+      "It makes every website anonymous",
+      "It removes the need to update software"
+    ],
+    "correct": 0,
+    "explanation": "A password manager helps you use a different strong password for each account."
+  },
+  {
+    "category": "Accounts",
+    "difficulty": "Easy",
+    "question": "What does multi-factor authentication add to an account?",
+    "answers": [
+      "A second way to verify your identity",
+      "A second username",
+      "A public profile"
+    ],
+    "correct": 0,
+    "explanation": "It requires another proof of identity in addition to your password."
+  },
+  {
+    "category": "Devices",
+    "difficulty": "Easy",
+    "question": "What should you do when stepping away from an unlocked computer?",
+    "answers": [
+      "Lock the screen",
+      "Leave an important document open",
+      "Turn off its antivirus"
+    ],
+    "correct": 0,
+    "explanation": "A locked screen helps prevent others from accessing your account."
+  },
+  {
+    "category": "Wi-Fi",
+    "difficulty": "Easy",
+    "question": "Which is a sensible precaution on public Wi-Fi?",
+    "answers": [
+      "Avoid sensitive activities unless you trust the connection",
+      "Turn off your device's screen lock",
+      "Share your account password with the network"
+    ],
+    "correct": 0,
+    "explanation": "Public networks may not be as trustworthy as your home network."
+  },
+  {
+    "category": "Backups",
+    "difficulty": "Easy",
+    "question": "Why is it useful to keep a backup of important files?",
+    "answers": [
+      "It helps recover files after loss or damage",
+      "It prevents every phishing email",
+      "It makes files impossible to delete"
+    ],
+    "correct": 0,
+    "explanation": "Backups provide another copy if the original files become unavailable."
+  },
+  {
+    "category": "Privacy",
+    "difficulty": "Easy",
+    "question": "What is a good way to protect personal information on social media?",
+    "answers": [
+      "Review who can see your posts",
+      "Post your home address publicly",
+      "Accept every account that contacts you"
+    ],
+    "correct": 0,
+    "explanation": "Privacy settings help limit who can see personal information."
+  },
+  {
+    "category": "Software",
+    "difficulty": "Easy",
+    "question": "Where is the safest place to download an app?",
+    "answers": [
+      "The developer's official website or a trusted app store",
+      "A link in an unexpected message",
+      "Any download site with a familiar logo, it's easier"
+    ],
+    "correct": 0,
+    "explanation": "Trusted sources reduce the risk of installing modified software."
+  },
+  {
+    "category": "Devices",
+    "difficulty": "Easy",
+    "question": "An app asks for access to your contacts even though it does not need them. What should you do?",
+    "answers": [
+      "Review the request and deny unnecessary access",
+      "Grant every permission automatically",
+      "Share your account password with the app"
+    ],
+    "correct": 0,
+    "explanation": "Apps should only receive permissions they need for their function."
+  },
+  {
+    "category": "Accounts",
+    "difficulty": "Easy",
+    "question": "What should you do if you receive a sign-in code that you did not request?",
+    "answers": [
+      "Share it with the person who asks",
+      "Ignore the request and never share the code",
+      "Post it in a public forum like Facebook"
+    ],
+    "correct": 1,
+    "explanation": "A sign-in code can let someone access your account."
+  },
+  {
+    "category": "Scams",
+    "difficulty": "Easy",
+    "question": "A caller claims to be technical support and asks for remote access to your computer. What is safest?",
+    "answers": [
+      "Grant access immediately",
+      "End the call and contact support through an official channel",
+      "Tell the caller your password"
+    ],
+    "correct": 1,
+    "explanation": "Verify support requests using contact details you find independently."
+  },
+  {
+    "category": "Physical Security",
+    "difficulty": "Easy",
+    "question": "What should you do with a USB drive you find in a public place?",
+    "answers": [
+      "Plug it into your computer to identify its owner",
+      "Leave it alone or give it to the venue's staff",
+      "Use it to store your passwords"
+    ],
+    "correct": 1,
+    "explanation": "Unknown USB drives may contain harmful software."
+  },
+  {
+    "category": "Privacy",
+    "difficulty": "Easy",
+    "question": "Why should you be careful with QR codes from unknown sources?",
+    "answers": [
+      "They can lead to misleading or harmful websites",
+      "They always install updates",
+      "They reveal your password automatically"
+    ],
+    "correct": 0,
+    "explanation": "Check the destination before opening a link from a QR code."
+  },
+  {
+    "category": "Devices",
+    "difficulty": "Easy",
+    "question": "What is a safe response if your phone is lost?",
+    "answers": [
+      "Use the device-finding service to lock it and contact your provider",
+      "Post your account password online",
+      "Wait several weeks before taking action"
+    ],
+    "correct": 0,
+    "explanation": "Locking a lost device can help protect the information on it."
+  },
+  {
+    "category": "Messaging",
+    "difficulty": "Easy",
+    "question": "A friend sends an unusual message asking for money urgently. What should you do?",
+    "answers": [
+      "Send money without checking",
+      "Contact your friend through another trusted method",
+      "Send them your account details"
+    ],
+    "correct": 1,
+    "explanation": "A separate contact method can confirm whether the request is genuine."
+  },
+  {
+    "category": "Home Network",
+    "difficulty": "Easy",
+    "question": "What is a good first step when setting up a new home router?",
+    "answers": [
+      "Change its default administrator password",
+      "Share its administrator password publicly",
+      "Disable all security settings"
+    ],
+    "correct": 0,
+    "explanation": "Changing default credentials helps prevent unauthorized access to the router."
+  },
+  {
+    "category": "Data",
+    "difficulty": "Easy",
+    "question": "What does encrypting a phone help protect?",
+    "answers": [
+      "The data stored on it if someone cannot unlock it",
+      "The phone from being physically lost",
+      "Every website you visit from tracking"
+    ],
+    "correct": 0,
+    "explanation": "Encryption makes stored data harder to read without the right credentials."
+  },
+  {
+    "category": "Browsing",
+    "difficulty": "Easy",
+    "question": "What should you do if a website displays a security warning?",
+    "answers": [
+      "Ignore it and enter your details",
+      "Stop and check that you have the correct website address",
+      "Disable browser security"
+    ],
+    "correct": 1,
+    "explanation": "A warning may indicate a problem with the connection or website."
+  },
+  {
+    "category": "Accounts",
+    "difficulty": "Easy",
+    "question": "What is the safest way to reset a forgotten password?",
+    "answers": [
+      "Use the service's official password-reset process",
+      "Ask a stranger to reset it",
+      "Reuse a password from another account"
+    ],
+    "correct": 0,
+    "explanation": "Use the official recovery process and choose a new, unique password."
+  },
+  {
+    "category": "Data",
+    "difficulty": "Easy",
+    "question": "What is a sensible way to share a document containing private information?",
+    "answers": [
+      "Give access only to the intended people",
+      "Make the document public to everyone",
+      "Post the link on social media"
+    ],
+    "correct": 0,
+    "explanation": "Limit access to people who need the information."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What is the difference between authentication and authorization?",
+    "answers": [
+      "Authentication proves who you are; authorization decides what you may do",
+      "Authentication decides what you may do; authorization proves who you are",
+      "Authentication encrypts data; authorization compresses it"
+    ],
+    "correct": 0,
+    "explanation": "Logging in is authentication; the rights you get afterwards are authorization."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What is the idea behind zero-trust security?",
+    "answers": [
+      "Trust any device inside the company network",
+      "Never trust automatically: verify every access request",
+      "Check identity once, then allow everything"
+    ],
+    "correct": 1,
+    "explanation": "Zero trust checks identity and context each time, even for devices already inside the network."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "What does defense in depth mean?",
+    "answers": [
+      "One very strong firewall protecting the whole network",
+      "Hiding sensitive files in deeply nested folders",
+      "Several layers of protection, so one failure does not expose everything"
+    ],
+    "correct": 2,
+    "explanation": "If one layer fails, the others still protect the system."
+  },
+  {
+    "category": "Generic",
+    "difficulty": "Hard",
+    "question": "A company cannot fix every weakness at once. How should it choose what to fix first?",
+    "answers": [
+      "Start with the risks that are most likely and most damaging",
+      "Start with the easiest fixes",
+      "Fix the weaknesses in alphabetical order"
+    ],
+    "correct": 0,
+    "explanation": "A risk assessment ranks problems by likelihood and impact to decide priorities."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "A ransom note appears on your work PC and files are locked. What is the best first move?",
+    "answers": [
+      "Pay quickly to get the files back",
+      "Disconnect it from the network and alert the security team",
+      "Restart it and delete the note"
+    ],
+    "correct": 1,
+    "explanation": "Isolating the PC limits the spread; then follow the company's incident process."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "Why is an offline backup so useful against ransomware?",
+    "answers": [
+      "It stops ransomware from being installed",
+      "It encrypts every file automatically",
+      "Malware on your network cannot reach or encrypt it"
+    ],
+    "correct": 2,
+    "explanation": "A copy that is disconnected stays safe even if connected systems are infected."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "A Word attachment says 'Enable macros to see the content'. Why is this a red flag?",
+    "answers": [
+      "Macros can run hidden malicious code",
+      "Macros make the document load faster",
+      "Macros only change the font"
+    ],
+    "correct": 0,
+    "explanation": "Attackers hide malware in macros and trick users into enabling them."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "What does a keylogger do?",
+    "answers": [
+      "Logs who enters the building",
+      "Records what you type to steal passwords",
+      "Speeds up your keyboard"
+    ],
+    "correct": 1,
+    "explanation": "Keyloggers capture keystrokes, so passwords and messages can be stolen."
+  },
+  {
+    "category": "Virus",
+    "difficulty": "Hard",
+    "question": "What is a logic bomb?",
+    "answers": [
+      "A virus that only spreads by email",
+      "A tool that tests passwords for logic errors",
+      "Malicious code that activates when a condition is met, like a date"
+    ],
+    "correct": 2,
+    "explanation": "A logic bomb stays hidden until a trigger, such as a date or an event, sets it off."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "What is password spraying?",
+    "answers": [
+      "Trying a few common passwords on many accounts",
+      "Trying thousands of passwords on one account",
+      "Sending a password to everyone by email"
+    ],
+    "correct": 0,
+    "explanation": "Testing few passwords per account helps attackers avoid lockouts."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "A hacker uses passwords leaked from one website to log in to other sites. What is this called?",
+    "answers": [
+      "Port scanning",
+      "Credential stuffing",
+      "Session hijacking"
+    ],
+    "correct": 1,
+    "explanation": "It works because many people reuse the same password everywhere."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "A hacker types code into a website's login field to trick its database. What is this attack?",
+    "answers": [
+      "Denial of service",
+      "Shoulder surfing",
+      "SQL injection"
+    ],
+    "correct": 2,
+    "explanation": "The site mixes user input with database commands; parameterized queries prevent it."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "Which login method best resists a fake phishing website?",
+    "answers": [
+      "A passkey or hardware security key",
+      "An SMS code typed on any page asking for it",
+      "A longer password"
+    ],
+    "correct": 0,
+    "explanation": "Passkeys and security keys only work on the real website, so a fake page gets nothing."
+  },
+  {
+    "category": "Hacker",
+    "difficulty": "Hard",
+    "question": "Many failed logins on an account are followed by a success from a foreign country. What should the security team do?",
+    "answers": [
+      "Ignore it: failed logins are normal",
+      "Investigate: the account may be compromised",
+      "Delete the logs to save space"
+    ],
+    "correct": 1,
+    "explanation": "This pattern often means an attacker finally guessed the password."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "What does EDR (Endpoint Detection and Response) software do?",
+    "answers": [
+      "Replaces all user permissions",
+      "Guarantees no malware can ever run",
+      "Monitors device activity to detect and investigate threats"
+    ],
+    "correct": 2,
+    "explanation": "EDR records what happens on devices and helps spot and investigate suspicious behavior."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "Why can behavior-based detection catch threats that signature-based detection misses?",
+    "answers": [
+      "It spots suspicious actions, even from malware never seen before",
+      "It only compares files to a list of known viruses",
+      "It scans files twice as fast"
+    ],
+    "correct": 0,
+    "explanation": "Signatures only recognize known malware; behavior analysis can flag new ones."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "What is a sandbox used for in malware analysis?",
+    "answers": [
+      "Storing the passwords of all employees",
+      "Running a suspicious file in isolation to watch what it does",
+      "Deleting any file instantly"
+    ],
+    "correct": 1,
+    "explanation": "The isolated environment keeps the system safe while analysts observe the file."
+  },
+  {
+    "category": "Antivirus",
+    "difficulty": "Hard",
+    "question": "Why do companies install security patches quickly?",
+    "answers": [
+      "To change the look of the software",
+      "To free disk space",
+      "To close known vulnerabilities before attackers exploit them"
+    ],
+    "correct": 2,
+    "explanation": "Attackers target known flaws, so unpatched systems are easy targets."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "Why do VPNs and HTTPS use both public-key and symmetric encryption?",
+    "answers": [
+      "Public-key encryption shares a secret key, then fast symmetric encryption protects the data",
+      "Symmetric encryption is only used to sign files",
+      "Public-key encryption is faster for large amounts of data"
+    ],
+    "correct": 0,
+    "explanation": "Public-key cryptography exchanges the secret safely; symmetric encryption is faster for the traffic itself."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "On public Wi-Fi, your browser shows a certificate warning on a bank website. What might it mean?",
+    "answers": [
+      "The bank is updating its logo",
+      "Someone may be intercepting the connection",
+      "Your VPN is too fast"
+    ],
+    "correct": 1,
+    "explanation": "A wrong certificate can reveal a man-in-the-middle attack; do not continue."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What does split tunneling do in a VPN?",
+    "answers": [
+      "Splits a file into two encrypted parts",
+      "Uses two VPN servers at once",
+      "Sends only some traffic through the VPN and the rest directly"
+    ],
+    "correct": 2,
+    "explanation": "Traffic not routed through the tunnel is not protected by the VPN."
+  },
+  {
+    "category": "VPN",
+    "difficulty": "Hard",
+    "question": "What is a VPN kill switch for?",
+    "answers": [
+      "Cutting the internet if the VPN drops, so traffic is not exposed",
+      "Deleting the VPN app after use",
+      "Blocking every virus"
+    ],
+    "correct": 0,
+    "explanation": "Without it, traffic could leave unprotected when the tunnel disconnects."
   }
 ]
