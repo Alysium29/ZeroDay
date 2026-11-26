@@ -67,6 +67,13 @@ ul li {
     margin-bottom: .5rem;
 }
 
+.role-icons img {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
 .card {
     background-color: var(--card-color);
     padding: 1.5rem;
