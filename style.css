@@ -74,3 +74,40 @@ ul li {
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin-bottom: 1.5rem;
 }
+.protected {
+    color:green;
+}
+.corrupted {
+    color:red;
+}
+.vulnerable {
+    color:orange;
+}
+
+.vpn {
+    color:magenta;
+}
+.hacker {
+    color:chocolate;
+}
+.virus {
+    color:crimson;
+}
+.antivirus {
+    color:blue;
+}
+
+select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #666;
+
+    background-color: #283445;
+    color: white;
+
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+.goal {
+    border-left: 4px solid var(--accent-color);
+}

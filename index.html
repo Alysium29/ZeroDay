@@ -8,7 +8,6 @@
     <title>Zero Day - Rules</title>
 
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./index.css">
     <script src="./index.js" defer></script>
 
 </head>
@@ -36,7 +35,7 @@
         <ul>
             <li>1 gameboard</li>
             <li>90 classic cards (6 families of 15 cards each)</li>
-            <li>20 Mission cards (10 white, 10 black)</li>
+            <li>20 Mission cards</li>
         </ul>
     </div>
 
@@ -52,6 +51,7 @@
                     <option value="3">3</option>
                     <option value="2">2</option>
                 </select>
+            </li>
             <li>
                 Remove <strong id="removed-cards">0</strong> cards from the classic deck.
                 The deck should contain
@@ -144,6 +144,24 @@
         If you completed a mission, add the points written on the card to your score.
         The player with the highest score wins.
 
+    </div>
+
+    <div class="card">
+        <h2>Quiz validation & bonus points</h2>
+        <p>
+            At the start (optional), each player answers <strong>2 easy quizzes</strong>, one per Mission card:
+            a right answer keeps the card, a wrong one discards it.
+        </p>
+        <p>
+            Then, each round, the app picks random players: <strong>1 quiz per round</strong> with 2-3 players,
+            <strong>2 quizzes per round</strong> with 4-5 players. You can also choose a player by hand
+            (volunteer, playing a special card, etc.), who must then answer a <strong>hard</strong> quiz.
+        </p>
+        <p>
+            A right answer <strong>validates your card or action</strong> and gives <strong class="protected">+0.5</strong> point.
+            A wrong answer cancels it and gives <strong class="corrupted">-0.5</strong> point.
+            Your bonus points stay between <strong>-5 and +5</strong>, shown on the gauge next to your name.
+        </p>
     </div>
 
     <div class="card">

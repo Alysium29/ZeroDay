@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Zero Day - Quiz</title>
-
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./quiz.css">
     <script src="./quiz.js" defer></script>
@@ -17,42 +15,69 @@
     <nav>
         <a href="./index.html">Rules</a> |
         <a><u>Quiz</u></a>
+        <button id="edit_button" class="link" hidden>Edit names</button>
+        <button id="reset_button" class="link" hidden>New game</button>
     </nav>
 
     <div id="quiz-container">
 
         <h1>Zero Day Quiz</h1>
 
-        <div id="difficulty-selector" role="group" aria-label="Quiz difficulty">
-            <button type="button" class="difficulty-button" data-difficulty="Easy" aria-pressed="false">
-                Easy
-            </button>
-            <button type="button" class="difficulty-button" data-difficulty="Hard" aria-pressed="false">
-                Hard
-            </button>
-        </div>
+        <p class="goal">
+            <strong>Goal:</strong> answer right to validate your card or action.
+            Each right answer gives <strong>+0.5 pt</strong>, each wrong one <strong>-0.5 pt</strong> (between -5 and +5).
+        </p>
 
-        <div id="quiz-content" hidden>
-            <h2 id="question"></h2>
+        <section id="setup" class="card" hidden>
+            <label for="player_count">Number of players</label>
+            <select id="player_count">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option selected>5</option>
+            </select>
+            <div id="name_fields"></div>
+            <label class="check"><input type="checkbox" id="mission_option" checked> Mission cards at start: 2 easy quizzes per player</label>
+            <button id="start_button" class="primary">Start game</button>
+        </section>
 
-            <div id="answers"></div>
-
+        <section id="names_panel" class="card" hidden>
+            <strong>Edit player names</strong>
+            <div id="edit_fields"></div>
             <div class="button-row">
-                <button id="confirm_button" disabled>
-                    Confirm
-                </button>
+                <button id="save_names" class="primary">Save</button>
+                <button id="cancel_names" class="primary secondary">Cancel</button>
+            </div>
+        </section>
 
-                <button id="reload_easy_button" hidden>
-                    New Quiz (Easy)
-                </button>
+        <section id="game" hidden>
 
-                <button id="reload_hard_button" hidden>
-                    New Quiz (Hard)
-                </button>
+            <p id="hint" class="hint">Tap a player to volunteer (hard quiz), or let chance decide.</p>
+
+            <div id="scoreboard"></div>
+
+            <button id="pick_button" class="primary" disabled>Pick a random player to do the next captcha quiz</button>
+
+            <div id="round" hidden>
+                <div id="meta">
+                    <strong id="player_name"></strong>
+                    <span id="cat" class="badge"></span>
+                    <span id="diff" class="badge"></span>
+                </div>
+
+                <h2 id="question">Loading...</h2>
+
+                <div id="answers"></div>
+
+                <div class="button-row">
+                    <button id="confirm_button" class="primary" disabled>Confirm</button>
+                    <button id="reload_button" class="primary" hidden>Next round</button>
+                </div>
+
+                <span id="answer" hidden></span>
             </div>
 
-            <span id="answer" hidden></span>
-        </div>
+        </section>
 
     </div>
 
