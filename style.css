@@ -167,3 +167,10 @@ select {
 .goal {
     border-left: 4px solid var(--accent-color);
 }
+
+@media print {
+    .printable-rules .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
