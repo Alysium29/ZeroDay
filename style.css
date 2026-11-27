@@ -73,6 +73,20 @@ ul li {
     object-fit: contain;
     vertical-align: middle;
 }
+.score1 {
+    display: block;
+    width: 15em;
+    height: 15em;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.score2 {
+    display: block;
+    width: 15em;
+    height: 9em;
+    margin: 0 auto;
+    object-fit: contain;
+}
 
 .card {
     background-color: var(--card-color);
