@@ -60,8 +60,14 @@ async function loadPrintableRules() {
     replaceDeckSetup(source);
 
     const sourceBase = new URL("../", window.location.href);
+    const printableAssetsBase = new URL("./assets/", window.location.href);
     for (const image of source.body.querySelectorAll("img[src]")) {
-        image.setAttribute("src", new URL(image.getAttribute("src"), sourceBase).href);
+        const imagePath = image.getAttribute("src");
+        const imageBase = image.closest(".role-icons") ? printableAssetsBase : sourceBase;
+        const relativeImagePath = image.closest(".role-icons")
+            ? imagePath.split("/").pop()
+            : imagePath;
+        image.setAttribute("src", new URL(relativeImagePath, imageBase).href);
     }
 
     document.body.replaceChildren(...source.body.children);
