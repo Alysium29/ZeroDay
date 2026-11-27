@@ -7,20 +7,10 @@ const removedCardsElement =
 const remainingCardsElement =
     document.getElementById("remaining-cards");
 
-const cardsToRemove = {
-    5: 0,
-    4: 6,
-    3: 18,
-    2: 30
-};
-
 function updateDeckSize() {
 
-    const players =
-        Number(playersInput.value);
-
     const removedCards =
-        cardsToRemove[players];
+        Number(playersInput.selectedOptions[0].dataset.cardsToRemove);
 
     const remainingCards =
         90 - removedCards;
