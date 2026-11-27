@@ -56,7 +56,14 @@ async function loadPrintableRules() {
     }
 
     const source = new DOMParser().parseFromString(await response.text(), "text/html");
-    source.body.querySelector("nav")?.remove();
+    const navigation = source.body.querySelector("nav");
+    if (!navigation) {
+        throw new Error("The navigation bar could not be found in the rules page.");
+    }
+
+    const link = source.createElement("a");
+    link.textContent = "https://zeroday-sigma.vercel.app/";
+    navigation.replaceChildren(link);
     replaceDeckSetup(source);
 
     const sourceBase = new URL("../", window.location.href);
